@@ -25,13 +25,13 @@ namespace Examen_POO_U6
     {
         static void Main(string[] args)
         {
-
+            // Variables Auxiliares
             string nombreax, descripcionax;
             float precioax;
             int cantidadax;
-            char C;
+            char C; // Variable del Ciclo
 
-            do
+            do // Cilco del Menu
             {
                 C = 'x';
                 try
@@ -59,23 +59,37 @@ namespace Examen_POO_U6
                 {
                     case 'a':
 
-                        StreamWriter inventario = new StreamWriter("Productos.txt", true);
+                        StreamWriter inventario = new StreamWriter("Productos.txt", true); // Crear o Añadir Archivo
 
-                        Console.Write("Nombre del Producto: ");
-                        nombreax = Console.ReadLine();
-                        Console.Write("Descripcion del Producto: ");
-                        descripcionax = Console.ReadLine();
-                        Console.Write("Precio del Producto: ");
-                        precioax = Single.Parse(Console.ReadLine());
-                        Console.Write("Cantidad en Stock del Producto: ");
-                        cantidadax = int.Parse(Console.ReadLine());
+                        try
+                        {
+                            Console.Write("Nombre del Producto: ");
+                            nombreax = Console.ReadLine();
+                            Console.Write("Descripcion del Producto: ");
+                            descripcionax = Console.ReadLine();
+                            Console.Write("Precio del Producto: ");
+                            precioax = Single.Parse(Console.ReadLine());
+                            Console.Write("Cantidad en Stock del Producto: ");
+                            cantidadax = int.Parse(Console.ReadLine());
 
-                        Producto producto = new Producto(nombreax, descripcionax, precioax, cantidadax);
+                            Producto producto = new Producto(nombreax, descripcionax, precioax, cantidadax);
 
-                        inventario.Write("Produsto: {0}\nDescripcion del Producto: {1}\nPrecio del Producto: {2:C}" +
-                            "\nCantidad en Stok: {3}\n\n", producto.nombre, producto.descripcion, producto.precio, producto.cantidad);
+                            inventario.Write("Produsto: {0}\nDescripcion del Producto: {1}\nPrecio del Producto: {2:C}" +
+                                "\nCantidad en Stok: {3}\n\n", producto.nombre, producto.descripcion, producto.precio, producto.cantidad);
 
-                        inventario.Close();
+                        }
+                        catch (FormatException)
+                        {
+                            Console.WriteLine("\n¡Error de Formato!");
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("\nError: " + e.Message);
+                        }
+                        finally
+                        {
+                            inventario.Close();
+                        }
 
                         Console.WriteLine("\nProducto Guardado, Precione <enter> para Continuar . . .");
                         Console.ReadLine();
@@ -85,7 +99,7 @@ namespace Examen_POO_U6
 
                         try
                         {
-                            StreamReader mostrar = new StreamReader("Productos.txt");
+                            StreamReader mostrar = new StreamReader("Productos.txt"); // Leer Archivo
                             string Line;
 
                             while ((Line = mostrar.ReadLine()) != null)
@@ -105,6 +119,9 @@ namespace Examen_POO_U6
                         break;
 
                     case 'c':
+
+                        // Salir del Programa
+
                         break;
 
                     default:
@@ -113,7 +130,6 @@ namespace Examen_POO_U6
                         Console.ReadKey();
 
                         break;
-
                 }
             }
             while (C != 'c');
