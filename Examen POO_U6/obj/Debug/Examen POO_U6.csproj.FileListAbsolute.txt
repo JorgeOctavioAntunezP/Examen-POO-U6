@@ -1,0 +1,7 @@
+C:\Users\Jorge\Desktop\Examen POO_U6\Examen POO_U6\bin\Debug\Examen POO_U6.exe.config
+C:\Users\Jorge\Desktop\Examen POO_U6\Examen POO_U6\bin\Debug\Examen POO_U6.exe
+C:\Users\Jorge\Desktop\Examen POO_U6\Examen POO_U6\bin\Debug\Examen POO_U6.pdb
+C:\Users\Jorge\Desktop\Examen POO_U6\Examen POO_U6\obj\Debug\Examen POO_U6.csproj.AssemblyReference.cache
+C:\Users\Jorge\Desktop\Examen POO_U6\Examen POO_U6\obj\Debug\Examen POO_U6.csproj.CoreCompileInputs.cache
+C:\Users\Jorge\Desktop\Examen POO_U6\Examen POO_U6\obj\Debug\Examen POO_U6.exe
+C:\Users\Jorge\Desktop\Examen POO_U6\Examen POO_U6\obj\Debug\Examen POO_U6.pdb

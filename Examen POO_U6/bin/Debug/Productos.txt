@@ -1,0 +1,10 @@
+Nombre del Produsto: Manzana
+Descripcion del Producto: Roja y Dulce
+Precio del Producto: 12.56
+Cantidad en Stok: 30
+
+Nombre del Produsto: Platano
+Descripcion del Producto: Amarillo y Alto en Potacio
+Precio del Producto: $16.43
+Cantidad en Stok: 56
+
